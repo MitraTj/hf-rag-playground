@@ -1,6 +1,6 @@
 # LangChain Experiments
 
-This repository focuses on experimenting with the LangChain library for building powerful applications with large language models (LLMs). By leveraging state-of-the-art language models like OpenAI's GPT-3.5 Turbo (and soon GPT-4), this project showcases how to create a searchable database from a YouTube video transcript, perform similarity search queries using the FAISS library, and respond to user questions with relevant and precise information.
+This repository focuses on experimenting with the LangChain library for building powerful applications with large language models (LLMs). 
 
 LangChain is a comprehensive framework designed for developing applications powered by language models. It goes beyond merely calling an LLM via an API, as the most advanced and differentiated applications are also data-aware and agentic, enabling language models to connect with other data sources and interact with their environment. The LangChain framework is specifically built to address these principles.
 
@@ -36,7 +36,7 @@ The OpenAI API is powered by a diverse set of [models](https://platform.openai.c
 #### 1. Clone the repository
 
 ```bash
-git clone https://github.com/daveebbelaar/langchain-experiments.git
+git clone https://github.com/MitraTj/hf-rag-playground.git
 ```
 
 #### 2. Create a Python environment
@@ -63,24 +63,27 @@ pip install -r requirements.txt
 
 #### 4. Set up the keys in a .env file
 
-First, create a `.env` file in the root directory of the project. Inside the file, add your OpenAI API key:
+First, create a `.env` file in the root directory of the project. Inside the file, add your HugginFace API Token:
 
 ```makefile
-OPENAI_API_KEY="your_api_key_here"
+HUGGINGFACEHUB_API_TOKEN="your_api_Token_here"
 ```
 
 Save the file and close it. In your Python script or Jupyter notebook, load the `.env` file using the following code:
 ```python
 from dotenv import load_dotenv, find_dotenv
+import os
+
 load_dotenv(find_dotenv())
+hf_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 ```
 
 By using the right naming convention for the environment variable, you don't have to manually store the key in a separate variable and pass it to the function. The library or package that requires the API key will automatically recognize the `OPENAI_API_KEY` environment variable and use its value.
 
-When needed, you can access the `OPENAI_API_KEY` as an environment variable:
+When needed, you can access the `HUGGINGFACEHUB_API_TOKEN` as an environment variable:
 ```python
 import os
-api_key = os.environ['OPENAI_API_KEY']
+api_key = os.environ["HUGGINGFACEHUB_API_TOKEN"]
 ```
 
 Now your Python environment is set up, and you can proceed with running the experiments.
@@ -89,6 +92,5 @@ Now your Python environment is set up, and you can proceed with running the expe
 
 This document is provided to you by Datalumina. We help data analysts, engineers, and scientists launch and scale a successful freelance business — $100k+ /year, fun projects, happy clients. If you want to learn more about what we do, you can visit our [website](https://www.datalumina.io/) and subscribe to our [newsletter](https://www.datalumina.io/newsletter). Feel free to share this document with your data friends and colleagues.
 
-## Tutorials
-For video tutorials on how to use the LangChain library and run experiments, visit the YouTube channel: [youtube.com/@daveebbelaar](https://youtube.com/@daveebbelaar)
+
 
