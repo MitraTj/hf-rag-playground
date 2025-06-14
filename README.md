@@ -25,8 +25,8 @@ By selling LangChain-based applications as a service to businesses, you can prov
 
 - [Python 3.6 or higher](https://www.python.org/downloads/)
 - [LangChain library](https://python.langchain.com/en/latest/index.html)
-- [OpenAI API key](https://platform.openai.com/)
-- [SerpAPI API Key](https://serpapi.com/)
+- [HuggingFace API Token](https://huggingface.co/settings/tokens)
+#- [SerpAPI API Key](https://serpapi.com/)
 
 ## OpenAI API Models
 The OpenAI API is powered by a diverse set of [models](https://platform.openai.com/docs/models) with different capabilities and price points. You can also make limited customizations to our original base models for your specific use case with fine-tuning.
